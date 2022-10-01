@@ -1,6 +1,6 @@
 {
   "name": "exposy-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "type": "module",
@@ -10,8 +10,16 @@
   "scripts": {
     "lint": "eslint"
   },
-  "keywords": [],
-  "author": "",
+  "repository": "https://github.com/exposy/exposy-cli.git",
+  "homepage": "https://github.com/exposy/exposy-cli",
+  "keywords": [
+    "expose",
+    "exposy",
+    "exposy-cli",
+    "proxy",
+    "ngrok"
+  ],
+  "author": "rahulbhooteshwar@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.24.0",
