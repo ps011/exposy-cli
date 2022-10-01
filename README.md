@@ -2,6 +2,18 @@
 
 CLI tool to expose localhost port to internet via exposy server
 
+## Installation
+
+> `npm install -g exposy-cli`
+
+## Usage
+
+> Run `exposy config` to configure exposy-server settings
+
+> `exposy start -p <any local app's port>`
+
+> Run `exposy -h` for help menu
+
 ## What is **Exposy** ?
 
 Exposy is a solution for exposing developer's local HTTP APIs over Internet using a `single command`.
