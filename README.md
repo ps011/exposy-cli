@@ -4,7 +4,7 @@ CLI tool to expose localhost port to internet via exposy server
 
 ## Installation
 
-> `npm install -g exposy-cli`
+> `npm install -g exposy`
 
 ## Usage
 

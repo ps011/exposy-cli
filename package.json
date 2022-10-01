@@ -1,6 +1,6 @@
 {
-  "name": "exposy-cli",
-  "version": "1.0.1",
+  "name": "exposy",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
