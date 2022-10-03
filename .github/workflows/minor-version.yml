@@ -1,6 +1,12 @@
-- name:  'Automated Version Bump'
-  uses:  'phips28/gh-action-bump-version@master'
-  env:
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  with:
-    version-type:  'minor'
+name: "Bump Package Version"
+on: workflow_dispatch
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Automated Version Bump"
+        uses: "phips28/gh-action-bump-version@master"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          version-type: "minor"
