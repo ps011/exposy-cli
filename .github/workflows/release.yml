@@ -1,0 +1,29 @@
+name: "Release Package Version"
+on:
+  workflow_dispatch:
+    inputs:
+      type:
+        type: choice
+        description: Select a version type for release
+        options:
+        - major
+        - minor
+        - patch
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout source code'
+        uses: 'actions/checkout@v2'
+        with:
+          ref: ${{ github.ref }}
+      - name: 'cat package.json'
+        run: cat ./package.json
+      - name: "Automated Version Bump"
+        uses: "phips28/gh-action-bump-version@master"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          version-type: '${{ github.event.inputs.type }}'
+      - name: 'cat package.json'
+        run: cat ./package.json
