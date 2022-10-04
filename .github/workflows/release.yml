@@ -11,7 +11,7 @@ on:
           - minor
           - patch
 jobs:
-  release-version:
+  bump-version:
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout source code"
@@ -25,6 +25,13 @@ jobs:
         with:
           version-type: "${{ github.event.inputs.releaseType }}"
           skip-tag: "true"
+  release-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout source code"
+        uses: "actions/checkout@v2"
+        with:
+          ref: ${{ github.ref }}
       - name: "Release to NPM registry"
         uses: mikeal/merge-release@master
         env:
