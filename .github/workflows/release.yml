@@ -11,7 +11,7 @@ on:
           - minor
           - patch
 jobs:
-  bump:
+  release-version:
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout source code"
